@@ -17,11 +17,11 @@ typedef uint32_t z2;
 
 #if __cplusplus >= 202002L
 #include <bit>
-uint32_t bwid(z2 x){
+inline uint32_t bwid(z2 x){
 	return (uint32_t)std::bit_width(x);
 }
 #else
-uint32_t bwid(z2 x){
+inline uint32_t bwid(z2 x){
 	uint32_t w=0;
 	z2 d=1;
 	while(d<=x){
